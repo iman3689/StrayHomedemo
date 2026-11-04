@@ -169,7 +169,7 @@ main{display:flex;flex-direction:column}
 .band-night{background:var(--night);color:var(--night-ink)}
 .band-night .sec-head .intro,.band-night .index{color:var(--night-muted)}
 .frame{position:relative}
-.frame::before,.frame::after{content:"";position:absolute;width:28px;height:28px;border:2px solid var(--line);pointer-events:none}
+.frame::before,.frame::after{display:none;content:"";position:absolute;width:28px;height:28px;border:2px solid var(--line);pointer-events:none}
 .frame::before{left:-4px;top:calc(-1 * var(--sp-l));border-right:0;border-bottom:0}
 .frame::after{right:-4px;bottom:calc(-1 * var(--sp-l));border-left:0;border-top:0}
 .band-night .frame::before,.band-night .frame::after{border-color:var(--night-line)}
