@@ -362,17 +362,6 @@ fieldset[disabled]{opacity:.55}
 .disp div{padding:12px 14px;background:var(--surface);border-left:3px solid var(--brand-text);color:var(--ink)}
 
 /* petition */
-.tagmaker{margin-top:var(--sp-xl);display:grid;gap:var(--sp-l);background:var(--paper);border:1px solid var(--line);padding:var(--sp-m)}
-@media (min-width:900px){.tagmaker{grid-template-columns:1fr 1fr;align-items:center;padding:var(--sp-l)}}
-.tagmaker h3{font-size:var(--s3);font-weight:900}
-.tagmaker .lead{margin-top:8px;color:var(--ink-muted)}
-.tm-form{display:grid;gap:var(--sp-s);min-width:0}
-.tm-form fieldset{padding:0;border:0;background:none}
-.tm-form legend{font-weight:700;font-size:.95rem;padding:0}
-.tm-prev{margin:0;justify-self:center;width:100%;max-width:380px}
-.tm-prev canvas{width:100%;height:auto;display:block}
-.tm-prev figcaption{text-align:center;margin-top:8px}
-.sw{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:-2px;border:1px solid var(--line)}
 .faq{margin-top:var(--sp-xl)}
 .faq h3{font-size:var(--s2);font-weight:900;margin-bottom:var(--sp-s)}
 .faq details{border-top:1px solid var(--night-line)}
@@ -667,22 +656,6 @@ fieldset[disabled]{opacity:.55}
         <p class="note">結果只在你的瀏覽器裡計算，不蒐集任何資料。僅供自我檢查，實際以官方網站為準。</p>
       </aside>
     </div>
-    <div class="tagmaker" id="tagmaker">
-      <div class="tm-form">
-        <div><p class="stepk">COLLAR TAG</p><h3>項圈名牌產生器</h3><p class="lead">晶片要靠醫院掃描才讀得到，名牌讓路人一眼就能聯絡你。輸入後會即時更新，可下載拿去製作名牌。</p></div>
-        <div class="field"><label for="tmName">毛孩名字</label><input type="text" id="tmName" value="小黑" maxlength="8" autocomplete="off"></div>
-        <div class="field"><label for="tmPhone">聯絡電話</label><input type="text" id="tmPhone" value="0900-000-000" maxlength="16" inputmode="tel" autocomplete="off"><span class="hint">這是範例號碼，請換成你的電話。資料只在你的瀏覽器裡產生，不會上傳或保存。</span></div>
-        <fieldset><legend>圖案</legend><div class="opts">
-          <label class="opt"><input type="radio" name="tmPet" id="tmDog" value="dog" checked><span>狗</span></label>
-          <label class="opt"><input type="radio" name="tmPet" id="tmCat" value="cat"><span>貓</span></label></div></fieldset>
-        <fieldset><legend>顏色</legend><div class="opts">
-          <label class="opt"><input type="radio" name="tmCol" id="tmClay" value="clay" checked><span><i class="sw" style="background:#d9a179"></i>陶土</span></label>
-          <label class="opt"><input type="radio" name="tmCol" id="tmTeal" value="teal"><span><i class="sw" style="background:#4b7a80"></i>灰青</span></label>
-          <label class="opt"><input type="radio" name="tmCol" id="tmNight" value="night"><span><i class="sw" style="background:#1d2433"></i>夜空</span></label></div></fieldset>
-        <div><button class="btn" type="button" id="tmDl">下載名牌圖（PNG）</button><p class="note" id="tmMsg" style="margin-top:8px" aria-live="polite"></p></div>
-      </div>
-      <figure class="tm-prev"><canvas id="tmCanvas" width="640" height="640" role="img" aria-label="名牌預覽"></canvas><figcaption class="note">即時預覽</figcaption></figure>
-    </div>
   </div>
 </section>
 
@@ -815,7 +788,7 @@ fieldset[disabled]{opacity:.55}
       <details><summary>緊急醫療授權會不會被濫用，讓別人隨便處置我的寵物？</summary><p>我們關心的只限「傷勢危及生命、且已登記的飼主暫時聯絡不上」的情況。授權範圍有多大、由誰判斷、要留下哪些紀錄，正是希望主管機關明確規範的部分，目的是保護動物，也保障飼主。</p></details>
       <details><summary>醫藥費應該由誰負擔？</summary><p>這是目前最容易引發爭議的地方（見個案二）。本站不主張特定答案，而是希望流程裡先講清楚費用怎麼處理，讓願意出手的人不必擔心最後求償無門。</p></details>
       <details><summary>飼主事後出現，還能把動物領回嗎？</summary><p>可以。依報導，臺南市動保處表示，依動物保護法及作業規範，走失犬隻找到飼主後必須歸還。我們希望的是，歸還前後的程序與費用協調能更清楚。</p></details>
-      <details><summary>我是飼主，現在可以做什麼？</summary><p>確認晶片登記的電話還能用，並在項圈掛上寫有電話的名牌。可以到「我該怎麼做？」選「我是飼主」，做 30 秒晶片檢查，順便用名牌產生器做一個。</p></details>
+      <details><summary>我是飼主，現在可以做什麼？</summary><p>確認晶片登記的電話還能用，並在項圈掛上寫有電話的名牌。可以到「我該怎麼做？」選「我是飼主」，做 30 秒晶片檢查。</p></details>
       <details><summary>這個連署會送到哪裡？</summary><p>這是課堂模擬連署，不會送出，也不保存任何資料。如果你認同這個訴求，可以透過政府的公開意見管道表達，例如國發會的公共政策網路參與平臺。</p></details>
     </div>
   </div>
@@ -1206,38 +1179,6 @@ if(!reduce)requestAnimationFrame(loop);
 
 addEventListener('resize',()=>{if(mx===null){dog.y=innerHeight-90;draw(dog)}});
 
-/* ---------- collar tag maker ---------- */
-const tmc=$('#tmCanvas'),tx=tmc.getContext('2d');
-const TCOL={clay:['#d9a179','#2b211c','#f6ecdf'],teal:['#4b7a80','#ffffff','#e8f0ef'],night:['#1d2433','#f3ead8','#f3ead8']};
-const tv=n=>($(`input[name=${n}]:checked`)||{}).value;
-function drawTag(){
-  const S=640,name=($('#tmName').value.trim()||'毛孩').slice(0,8),phone=($('#tmPhone').value.trim()||'電話').slice(0,16);
-  const [bg,fg,badge]=TCOL[tv('tmCol')||'clay'];
-  tx.clearRect(0,0,S,S);
-  tx.fillStyle=bg;tx.beginPath();tx.arc(320,340,282,0,Math.PI*2);tx.fill();
-  tx.globalCompositeOperation='destination-out';tx.beginPath();tx.arc(320,96,24,0,Math.PI*2);tx.fill();tx.globalCompositeOperation='source-over';
-  tx.strokeStyle=fg;tx.globalAlpha=.22;tx.lineWidth=5;tx.beginPath();tx.arc(320,340,256,0,Math.PI*2);tx.stroke();tx.globalAlpha=1;
-  tx.fillStyle=badge;tx.beginPath();tx.arc(320,222,78,0,Math.PI*2);tx.fill();
-  const sp=(tv('tmPet')==='cat'?CAT:DOG).sit,cell=8,ox=320-8*cell,oy=222-7*cell;
-  sp.forEach((r,y)=>[...r].forEach((c,x)=>{if(C[c]){tx.fillStyle=C[c];tx.fillRect(ox+x*cell,oy+y*cell,cell,cell)}}));
-  tx.fillStyle=fg;tx.textAlign='center';tx.textBaseline='alphabetic';
-  tx.font='900 70px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif';tx.fillText(name,320,388,440);
-  tx.font='500 28px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif';tx.fillText('我有晶片，走失請聯絡家人',320,438,440);
-  tx.font='900 54px "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif';tx.fillText(phone,320,512,460);
-  tmc.setAttribute('aria-label',`名牌預覽：${name}，電話 ${phone}`);
-}
-['tmName','tmPhone'].forEach(id=>$('#'+id).addEventListener('input',drawTag));
-$('#tagmaker').addEventListener('change',drawTag);
-drawTag();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(drawTag);
-let dlCap=null;const dlReady=(window.claude&&window.claude.use)?window.claude.use('downloads').then(d=>{dlCap=d}).catch(()=>{}):Promise.resolve();
-$('#tmDl').addEventListener('click',async()=>{
-  const msg=$('#tmMsg');msg.textContent='';
-  const fname='StrayHome-名牌-'+($('#tmName').value.trim()||'毛孩')+'.png';
-  const blob=await new Promise(r=>tmc.toBlob(r,'image/png'));if(!blob)return;
-  await dlReady;
-  if(dlCap){try{await dlCap.save({filename:fname,data:blob})}catch(e){msg.textContent=e&&e.code==='declined'?'已取消下載。':'這個畫面無法下載，請改用 GitHub Pages 版。'}return}
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fname;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
-});
 })();
 </script>
 
